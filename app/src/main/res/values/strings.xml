@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidPreparationExam1</string>
+    <string name="mainHeader">Main</string>
 </resources>
