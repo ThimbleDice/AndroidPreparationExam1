@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private void setListener(){
         setButtonListener();
         setSeekBarListener();
+        setMusicListener();
     }
 
     private void setButtonListener(){
@@ -89,6 +91,15 @@ public class MainActivity extends AppCompatActivity {
                 seekBarMusicHandler.postDelayed(this, 1000);
             }
         }, 1000);
+    }
+
+    private void setMusicListener(){
+        music.getMediaPlayer().setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Toast.makeText(getApplicationContext(), "Finish", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 }

@@ -56,4 +56,10 @@ public class Music {
     public int getDuration(){
         return this.mediaPlayer.getDuration();
     }
+
+    public void changeVolume(int percentVolume){
+        int maxVolume = 100;
+        float volume = (float) (1 - (Math.log(maxVolume - percentVolume) / Math.log(maxVolume)));
+        this.mediaPlayer.setVolume(volume, volume);
+    }
 }
