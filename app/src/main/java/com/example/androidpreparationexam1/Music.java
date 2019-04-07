@@ -17,15 +17,43 @@ public class Music {
         return mediaPlayer;
     }
 
-    public void start(){
+    public void toggle(){
+        if(this.mediaPlayer.isPlaying()){
+            this.pause();
+        }else{
+            this.start();
+        }
+    }
 
+    public void start(){
+        this.mediaPlayer.start();
+    }
+
+    public void pause(){
+        this.mediaPlayer.pause();
     }
 
     public void stop(){
-
+        this.mediaPlayer.stop();
     }
 
-    public void goTo(){
+    public void seekToPercent(int percent){
+        this.mediaPlayer.seekTo(percent * this.mediaPlayer.getDuration() / 100);
+    }
 
+    public boolean isPlaying(){
+        return this.mediaPlayer.isPlaying();
+    }
+
+    public int getPercent(){
+        return  this.getCurrentPosition() * 100 / this.getDuration();
+    }
+
+    public int getCurrentPosition(){
+        return this.mediaPlayer.getCurrentPosition();
+    }
+
+    public int getDuration(){
+        return this.mediaPlayer.getDuration();
     }
 }
