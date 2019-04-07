@@ -1,0 +1,28 @@
+créer activité
+	Constraint layout dans un constraint layout
+
+Changer d'activité
+
+Seek bar
+
+Listener
+
+Toast
+
+async task
+	tread
+
+channel pour notification
+envoyé notif
+
+string.xml
+
+image
+
+son
+
+cycle de vie d'une application
+	oncreate
+	onstart
+
+Pas firebase
